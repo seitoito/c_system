@@ -1,0 +1,133 @@
+/*全体の装飾a*/
+body {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TOPボタン */
+.header-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    z-index: 1000;
+    background-color: #1978d6;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* ボックスの横幅を均等にする */
+.search-field {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* 文字とボックスの幅を均等に */
+.search-label {
+    width: 100px;
+}
+
+/* セレクトとテキストボックスの幅を揃える */
+.search-box {
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+    flex-grow: 1;
+    padding: 10px; /* パディングを調整 */
+    width: 250px; /* 幅を設定 */
+    height: 50px; /* 高さを設定 */
+}
+
+
+.search-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せに変更 */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 80px; /* 上部の余白をボタンの高さに合わせて調整 */
+    margin-bottom: 20px; /* テーブルの上部との余白を追加 */
+}
+
+/* search-field全体の大きさを広げる */
+.wide-table {
+    width: calc(100% - 100px); /* 両端の余白を除いた幅を設定 */
+}
+
+.customer-table {
+    border-collapse: collapse; /* セル間の隙間をなくし、枠線を重ねる */
+    margin: 20px; /* 上下左右の余白を設定 */
+}
+
+.customer-table th, .customer-table td {
+    border: 1px solid #dddddd; /* セルの枠線を設定 */
+    padding: 8px; /* セル内の余白を設定 */
+    text-align: left; /* セル内のテキストを左寄せにする */
+}
+
+.register-button {
+    position: fixed;
+    top: 10px;
+    right: 50px; /* 右の余白を調整 */
+    padding: 15px 30px; /* パディングを増やしてボタンを大きくする */
+    font-size: 16px;
+    z-index: 1000;
+    background-color: #1978d6;
+    color: #ffffff;
+}
+
+/* セレクトと検索ボタンの配置 */
+.company-search-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* 要素を縦方向に配置 */
+}
+
+/* 検索ボタン */
+.search-button {
+    margin-top: 10px; /* セレクトボックスとの間隔を設定 */
+    padding: 10px 20px; /* パディングを調整 */
+    cursor: pointer;
+    background-color:#1978d6;
+    color: #ffffff;
+}
+
+/* 所属会社のラベルのスタイル */
+.company-label {
+    display: flex; /* テキストを中央揃えにするために flex を使用 */
+    margin-bottom: 10px; /* ボタンとの間隔を調整 */
+}
+
+.company-search-buttons .search-box {
+    width: 500px;
+}
+
+
+.date-range-container {
+    display: flex; /* ボックスを水平方向に並べる */
+}
+
+.date-range-box {
+    width: 200px; /* 例として幅を200pxに設定 */
+    margin-right: 20px; /* テキストボックス間の間隔を調整 */
+}
+
+
+.date-range-box {
+    margin-right: 50px; /* ボックス間の間隔を広く設定 */
+}
+
+
+.customer-table wide-table {
+    margin-top: 20px;
+}
+
+.register-button {
+    position: fixed; top: 10px; right: 10px
+}

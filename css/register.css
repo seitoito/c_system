@@ -1,0 +1,185 @@
+/* register.css */
+
+h1 {
+    margin-left: 20px; /* 20px 右にずらす */
+  }
+
+
+.container {
+    width: 100%;
+    max-width: 850px; /* 最大幅を指定 */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* フォームを左寄せにする */
+    position: relative; /* 相対位置指定 */
+  }
+  
+  .container h1 {
+    font-size: 24px; /* h1要素のフォントサイズを調整 */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* 各項目の下にマージンを追加 */
+  }
+  
+  label {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: calc(60% - 10px);
+    background-color: #ffffff;color: #000000;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+      width: 120%; /* 幅を120%に設定 */
+      padding: 8px 10px; /* 適切なパディングでテキストが表示されるように */
+      padding: 15px; /* 内側の余白 */
+      border: 1px solid #ccc; /* 境界線のスタイル */
+      border-radius: 4px; /* 境界線の角の丸み */
+      box-sizing: border-box; /* ボックスモデルの設定 */
+  }
+.modal .input-edit {
+    width: calc(60%); /* h3の幅に一致させるための計算 */
+    height: 36px; /* h3の高さに合わせる */
+    font-size: 18px; /* h3と同じフォントサイズを適用 */
+    padding: 10px; /* h3のパディングと同じに設定 */
+    border: 1px solid #ddd; /* h3のボーダーと一致 */
+    background-color: #ffffff; /* h3の背景色と一致 */
+    color: #000000; /* h3の文字色と一致 */
+    box-sizing: border-box; /* パディングとボーダーを幅に含める */
+}
+
+
+
+
+  input[type="submit"] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .back-link {
+    position: absolute; /* 絶対位置指定 */
+    top: 27px; /* 上からの位置指定 */
+    right: -147px; /* 右からの位置指定 */
+    font-size: 16px; /* フォントサイズを顧客登録のフォントと同じにする */
+    padding: 10px 20px; /* ボタンのパディングを追加 */
+    background-color: #007bff; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボタンのボーダーを削除 */
+    border-radius: 4px; /* ボタンの角丸を設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+  }
+  
+  .back-link:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+  }
+  .search-box {
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+    flex-grow: 1;
+    padding: 10px; /* パディングを調整 */
+    width: 1020px; /* 幅を設定 */
+    height: 50px; /* 高さを設定 */
+}
+
+
+ /* モーダルのCSS */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 150px;
+    width: 100%;
+
+    padding: 50px; /* モーダルの余白を調整 */
+}
+
+/* モーダルの内容 */
+.modal-content {
+    margin-top: 50px;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto; /* 中央揃え */
+}
+
+/* 閉じるボタン */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 会社一覧 */
+.company-list {
+    padding: 10px 0;
+}
+
+
+.company-item {
+    display: flex;
+    align-items: center;
+}
+
+.company-input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.edit-button {
+    margin-left: 10px;
+}
+.company-item .company-input {
+    flex: 1; /* 残りのスペースを均等に分配する */
+    margin-right: 11px; /* テキストボックスの右側に余白を設定 */
+}
+
+.delete-button {
+    margin-left: 10px; /* ボタン間に余白を設定 */
+}
+.company-item h3 {
+    margin: 0;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: calc(60% - 10px);
+}
+
+h2 {
+    color: #000000;
+}
+
+.register-button {
+    margin-right: 345px;
+}
+
