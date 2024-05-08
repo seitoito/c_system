@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = document.getElementById('register-button');
 
     // ボタンがクリックされたときのイベントリスナーを追加
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', function() {
         // FormData オブジェクトを生成
         const formData = new FormData(form);
     
