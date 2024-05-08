@@ -49,9 +49,9 @@
         <div class="form-group">
             <label for="company">7. 所属会社</label>
                 <select id="company_id" name="company_id" class="form-control">
-                    <option value="1">会社1</option>
+                    <!-- <option value="1">会社1</option>
                     <option value="2">会社2</option>
-                    <option value="3">会社3</option>
+                    <option value="3">会社3</option> -->
                     <!-- その他のオプションを追加可能 -->
                 </select>
                 <button type="button" id="select-company-button" onclick="openCompanyModal()">会社名を登録・編集・削除</button>
