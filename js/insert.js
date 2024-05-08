@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     // フォーム要素を取得
     var form = document.querySelector('form');
-    var button = document.getElementById('register-button');
 
-    // ボタンがクリックされたときのイベントリスナーを追加
-    button.addEventListener('click', function(event) {
+    // フォームがsubmitされたときのイベントリスナーを追加
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // デフォルトの送信をキャンセル
+
         // FormData オブジェクトを生成
         const formData = new FormData(form);
-    
+
         // FormData を JSON オブジェクトに変換
         const jsonData = {};
         formData.forEach((value, key) => {
             jsonData[key] = value;
         });
-    
+
         // JSON データをサーバーに送信
         var requestData = {
             model: "UserModel",  // 送信するクラス名
@@ -22,14 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         sendData(requestData);
     });
-    
+});
 
     document.getElementById('register-button').addEventListener('click', function() {
         // データを登録する処理
         console.log("登録ボタンが押されました")
         window.location.href = 'list.php'; // ボタンが押された後にリダイレクト
     });
-});
+
+  
 // サーバーに JSON データを送信する関数
 function sendData(formData) {
     fetch('controller.php', {

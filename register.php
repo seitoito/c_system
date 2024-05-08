@@ -56,7 +56,7 @@
                 </select>
                 <button type="button" id="select-company-button" onclick="openCompanyModal()">会社名を登録・編集・削除</button>
         </div>
-        <input type="button" id="register-button"value="登録する">
+        <input type="submit" id="register-button"value="登録する">
     </form>
     <a href="list.php" class="back-link">一覧画面へ戻る</a>
   </div>
