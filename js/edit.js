@@ -38,49 +38,47 @@ function initializeEditForm() {
         console.error('Fetch error:', error);
     });
 
-    // 更新ボタンがクリックされた時の処理
-    document.getElementById('update-button').addEventListener('click', function() {
-        updateCustomer(customerId);
-        console.log("ボタンが押されました")
-        window.location.href = 'list.php';
-    });
+// 更新ボタンがクリックされた時の処理
+document.getElementById('update-button').addEventListener('click', function() {
+    updateCustomer(customerId);
+});
 
-
-    // 顧客情報を更新する関数
-    function updateCustomer(customerId) {//更新する顧客のIDを指定する
-        var requestData = {
-            model: "UserModel",
-            method: "update",
-            data: {
-                "id": customerId,
-                "name": document.getElementById('name').value,
-                "name_kana": document.getElementById('name_kana').value,
-                "email": document.getElementById('email').value,
-                "phone": document.getElementById('phone').value,
-                "company_id": document.getElementById('company_id').value,
-                "birthday": document.getElementById('birthday').value,
-                "gender": document.getElementById('gender').value
-            }
+// 顧客情報を更新する関数
+function updateCustomer(customerId) {
+    var requestData = {
+        model: "UserModel",
+        method: "update",
+        data: {
+            "id": customerId,
+            "name": document.getElementById('name').value,
+            "name_kana": document.getElementById('name_kana').value,
+            "email": document.getElementById('email').value,
+            "phone": document.getElementById('phone').value,
+            "company_id": document.getElementById('company_id').value,
+            "birthday": document.getElementById('birthday').value,
+            "gender": document.getElementById('gender').value
         }
-
-        fetch('controller.php', {
-            method: 'POST',
-            body: JSON.stringify(requestData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('update result:', data);
-        })
-        .catch(error => {
-            console.error('Fetch error:', error);
-        });
     }
+
+    fetch('controller.php', {
+        method: 'POST',
+        body: JSON.stringify(requestData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('update result:', data);
+        window.location.href = 'list.php';
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+    });
+}
 }
