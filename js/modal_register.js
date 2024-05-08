@@ -36,7 +36,6 @@ function updateSelect(data) {
     // company-listが存在する場合のみ処理を行う
     if (companyList) {
         // 既存の会社情報を全て削除
-        Array.from(companyList.querySelectorAll('.company-item:not(.input-row)')).forEach(item => item.remove());
         selectElement.innerHTML = '';
 
         // 新しい会社情報を追加
@@ -61,7 +60,7 @@ function updateSelect(data) {
             companyList.appendChild(companyItem);
         });
     }
-            // selectElementが存在する場合のみ処理を行う
+    // selectElementが存在する場合のみ処理を行う
     if (selectElement) {
         data.body.forEach(customer => {
             const optionElement = document.createElement('option');
