@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("登録ボタンが押されました")
         window.location.href = 'list.php'; // ボタンが押された後にリダイレクト
     });
-
   
 // サーバーに JSON データを送信する関数
 function sendData(formData) {
