@@ -87,6 +87,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column; /* 要素を縦方向に配置 */
+    box-sizing: border-box;
 }
 
 /* 検索ボタン */

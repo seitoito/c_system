@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     // フォーム要素を取得
     var form = document.querySelector('form');
+    var button = document.getElementById('register-button');
 
-    // フォームが送信されたときのイベントリスナーを追加
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // デフォルトの送信をキャンセル
+    // ボタンがクリックされたときのイベントリスナーを追加
+    button.addEventListener('click', function(event) {
         // FormData オブジェクトを生成
         const formData = new FormData(form);
-
+    
         // FormData を JSON オブジェクトに変換
         const jsonData = {};
         formData.forEach((value, key) => {
             jsonData[key] = value;
         });
-
+    
         // JSON データをサーバーに送信
         var requestData = {
             model: "UserModel",  // 送信するクラス名
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         sendData(requestData);
     });
+    
 
     document.getElementById('register-button').addEventListener('click', function() {
         // データを登録する処理
