@@ -23,10 +23,10 @@
         <div class="search-field">
             <label for="gender" class="search-label">性別:</label>
             <select id="gender" name="gender" class="search-box">
-                <option value="">選択してください</option>
+                <option value="all">全て</option>
                 <option value="1">男性</option>
                 <option value="2">女性</option>
-                <option value="all">全て</option>
+                <option value="3">その他</option>
             </select>
         </div>
         <div class="search-field">
