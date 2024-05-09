@@ -62,8 +62,41 @@ $dbname = "client_db";
     </form>
     <a href="list.php" class="back-link">一覧画面へ戻る</a>
   </div>
+    <!-- モーダルのHTML -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>会社一覧</h2>
+           <!-- ここに会社一覧を表示するコンテンツ -->
+                <div class="company-item">
+                    <input type="text" id="company" name="company" class="company-input" placeholder="会社名を入力">
+                    <button id="registerButton" class="register-button">登録</button>
+                </div>
+                <div id="company-list" class="company-list">
+                <div class="company-item">
+                    <h3>会社名1</h3>
+                    <button class="edit-button" onclick="editCompanyName(this)">編集</button>
+                    <button class="delete-button">削除</button>
+                </div>
+                <div class="company-item">
+                    <h3>会社名1</h3>
+                    <button class="edit-button" onclick="editCompanyName(this)">編集</button>
+                    <button class="delete-button">削除</button>
+                </div>
+                <div class="company-item">
+                    <h3>会社名1</h3>
+                    <button class="edit-button" onclick="editCompanyName(this)">編集</button>
+                    <button class="delete-button">削除</button>
+                </div>
+                <div class="company-item">
+                    <h3>会社名1</h3>
+                    <button class="edit-button" onclick="editCompanyName(this)">編集</button>
+                    <button class="delete-button">削除</button>
+                </div>
+    </div>
 
   <script src="js/edit.js"></script>
-
+  <script src="js/insert_modal.js" ></script>
+  <script src="js/modal_register.js" ></script>
 </body>
 </html>
