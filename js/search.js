@@ -3,9 +3,7 @@
 document.getElementById('search-button').addEventListener('click', searchCustomers);
 document.addEventListener('DOMContentLoaded', searchCustomers);
 
-// 編集ボタンにイベントリスナーを追加
-
-// 実行する関数
+// 一覧表示をする関数
 function searchCustomers() {
     // フォームからの入力値を取得してparamsオブジェクトに格納
     var params = {
@@ -18,7 +16,6 @@ function searchCustomers() {
     };
 
 
-
     // 全体のリクエストデータ構造を設定
     var requestData = {
         model: "UserModel",  // 送信するクラス名
@@ -28,7 +25,8 @@ function searchCustomers() {
     // console.log(requestData);
 
     
-const button = document.getElementById('edit-button');
+// const button = document.getElementById('edit-button');
+
 // fetchリクエストを作成してサーバーに送信
 fetch('controller.php', {
     method: 'POST',
@@ -53,7 +51,7 @@ fetch('controller.php', {
 
 
 
-// ビューを更新する関数
+// 一覧表示関数
 function updateView(data2) {
     const resultsTbody = document.getElementById('results'); // tbody要素を取得
     // 初期行以外を削除

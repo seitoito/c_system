@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // フォームがsubmitされたときのイベントリスナーを追加
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // デフォルトの送信をキャンセル
-
         // FormData オブジェクトを生成
         const formData = new FormData(form);
 
@@ -26,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
     document.getElementById('register-button').addEventListener('click', function() {
-        // データを登録する処理
-        console.log("登録ボタンが押されました")
+
         window.location.href = 'list.php'; // ボタンが押された後にリダイレクト
     });
   

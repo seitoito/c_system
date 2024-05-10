@@ -38,6 +38,7 @@ function initializeEditForm() {
         console.error('Fetch error:', error);
     });
 
+    
 // 更新ボタンがクリックされた時の処理
 document.getElementById('update-button').addEventListener('click', function() {
     updateCustomer(customerId);

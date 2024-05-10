@@ -1,4 +1,5 @@
-
+<?php
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,24 +16,24 @@
     <form action="submit.php" method="post">
         <div class="form-group">
             <label for="customer_name">1. 顧客名</label>
-            <input type="text" id="customer_name" name="name">
+            <input type="text" id="customer_name" name="name" required>
         </div>
         <div class="form-group">
             <label for="customer_name_kana">2. 顧客名カナ</label>
-            <input type="text" id="customer_name_kana" name="name_kana">
+            <input type="text" id="customer_name_kana" name="name_kana"pattern="^[ァ-ヶー]+$" required>
         </div>
         <div class="form-group">
             <label for="email">3. メールアドレス</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
         </div>
         <div class="form-group">
             <label for="phone">4. 電話番号</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone"pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" name="phone">
         </div>
         <div class="form-group">
         </select>
             <label for="gender">5. 性別</label>
-            <select id="gender" name="gender">
+            <select id="gender" name="gender" required>
             <option value="1">男性</option>
             <option value="2">女性</option>
             <option value="3">その他</option>
@@ -42,23 +43,20 @@
             <label class="search-label">6.生年月日:</label>
             <div class="date-range-container">
                 <div class="date-range-box end-date-box">
-                    <input type="date" name="birthday" class="search-box">
+                    <input type="date" name="birthday" class="search-box" required>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <label for="company">7. 所属会社</label>
-                <select id="company_id" name="company_id" class="form-control">
-                    <!-- <option value="1">会社1</option>
-                    <option value="2">会社2</option>
-                    <option value="3">会社3</option> -->
-                    <!-- その他のオプションを追加可能 -->
+                <select id="company_id" name="company_id" class="form-control" >
                 </select>
                 <button type="button" id="select-company-button" onclick="openCompanyModal()">会社名を登録・編集・削除</button>
         </div>
         <input type="submit" id="register-button"value="登録する">
+        <a href="list.php" class="back-link">一覧画面へ戻る</a>
     </form>
-    <a href="list.php" class="back-link">一覧画面へ戻る</a>
+    
   </div>
 
   <!-- ここにモーダルのHTMLを追加 -->

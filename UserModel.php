@@ -7,7 +7,7 @@ class UserModel {
     public function __construct($pdo) {
         $this->pdo = $pdo;
     }
-
+    // $formdataには登録フォームの内容
     public function insert($formData) {
         try {
             // $formData = $formDatas['data'];
@@ -30,8 +30,9 @@ class UserModel {
     }
 
     public function search($data) {
-                // データベースから会社の一覧を取得
+        // データベースから会社の一覧を取得
         $sql = "SELECT id, name FROM companies";
+
         $pdo = $this->pdo;
         $sql = "SELECT u.*, c.name AS company_name FROM users AS u LEFT JOIN companies AS c ON u.company_id = c.id WHERE 1=1";
     
@@ -75,7 +76,7 @@ class UserModel {
     
 
 
-    //顧客データを取得する
+    //顧客データを取得して初期表示
     public function edit($customerId) {
         try {
             // 顧客IDをもとにデータベースから顧客の情報を取得
@@ -93,28 +94,28 @@ class UserModel {
             return $responseData;
         }
     }
-    
-    public function update($formData) {
-        try {
-            $stmt = $this->pdo->prepare("UPDATE users SET name = :name, name_kana = :name_kana, phone = :phone, email = :email, company_id = :company_id, birthday = :birthday, gender = :gender WHERE id = :id");//各カラム名と値をセット、whereでどのＩＤか
-            $stmt->bindParam(':id', $formData['id']);
-            $stmt->bindParam(':name', $formData['name']);
-            $stmt->bindParam(':name_kana', $formData['name_kana']);
-            $stmt->bindParam(':phone', $formData['phone']);
-            $stmt->bindParam(':email', $formData['email']);
-            $stmt->bindParam(':company_id', $formData['company_id']);
-            $stmt->bindParam(':birthday', $formData['birthday']);
-            $stmt->bindParam(':gender', $formData['gender']);
-            $stmt->execute();
+        // 編集
+        public function update($formData) {
+            try {
+                $stmt = $this->pdo->prepare("UPDATE users SET name = :name, name_kana = :name_kana, phone = :phone, email = :email, company_id = :company_id, birthday = :birthday, gender = :gender WHERE id = :id");//各カラム名と値をセット、whereでどのＩＤか
+                $stmt->bindParam(':id', $formData['id']);
+                $stmt->bindParam(':name', $formData['name']);
+                $stmt->bindParam(':name_kana', $formData['name_kana']);
+                $stmt->bindParam(':phone', $formData['phone']);
+                $stmt->bindParam(':email', $formData['email']);
+                $stmt->bindParam(':company_id', $formData['company_id']);
+                $stmt->bindParam(':birthday', $formData['birthday']);
+                $stmt->bindParam(':gender', $formData['gender']);
+                $stmt->execute();
+                $responseData['success'] = 0;
+                return $responseData;
 
-            $responseData['success'] = 0;
-            return $responseData;
-        } catch (PDOException $e) {
-            $responseData['success'] = 1;
-            $responseData['error'] = $e->getMessage();
-            return $responseData;
+            } catch (PDOException $e) {
+                $responseData['success'] = 1;
+                $responseData['error'] = $e->getMessage();
+                return $responseData;
+            }
         }
-    }
     
         //削除の処理
         public function delete($customerId) {
