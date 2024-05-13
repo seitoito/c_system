@@ -37,12 +37,14 @@ function initializeEditForm() {
     .catch(error => {
         console.error('Fetch error:', error);
     });
+}
 
-    
-// 更新ボタンがクリックされた時の処理
-document.getElementById('update-button').addEventListener('click', function() {
-    updateCustomer(customerId);
-});
+// // 更新ボタンがクリックされた時の処理
+// document.getElementById('update-button').addEventListener('click', function() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const customerId = urlParams.get('id');
+//     updateCustomer(customerId);
+// });
 
 // 顧客情報を更新する関数
 function updateCustomer(customerId) {
@@ -81,5 +83,4 @@ function updateCustomer(customerId) {
     .catch(error => {
         console.error('Fetch error:', error);
     });
-}
 }
