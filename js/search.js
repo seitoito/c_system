@@ -3,6 +3,8 @@
 document.getElementById('search-button').addEventListener('click', searchCustomers);
 document.addEventListener('DOMContentLoaded', searchCustomers);
 
+
+
 // 検索
 function searchCustomers() {
     // フォームからの入力値を取得してparamsオブジェクトに格納
@@ -76,36 +78,41 @@ function updateView(data2) {
 };
 
 
-//削除の関数
 function deleteCustomer(customerId) {
-    var requestData = {
-        model: "UserModel",
-        method: "delete",
-        data:{"id": customerId},
+    // 本当に削除するか確認するアラート
+    if (confirm("本当に削除しますか？")) {
+        var requestData = {
+            model: "UserModel",
+            method: "delete",
+            data:{"id": customerId},
+        }
+
+        fetch('controller.php', {
+            method: 'POST',
+            body: JSON.stringify(requestData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Delete result:', data);
+            // 必要に応じてレスポンスを処理
+            // ページをリロード
+            location.reload();
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+        });
+
+        console.log('Delete button clicked for customer ID:', customerId);
+    } else {
+        // キャンセル時の処理
+        console.log('Delete canceled for customer ID:', customerId);
     }
-
-    fetch('controller.php', {
-        method: 'POST',
-        body: JSON.stringify(requestData),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Delete result:', data);
-        // 必要に応じてレスポンスを処理
-        // ページをリロード
-        location.reload();
-    })
-    .catch(error => {
-        console.error('Fetch error:', error);
-    });
-
-    console.log('Delete button clicked for customer ID:', customerId);
 }

@@ -39,12 +39,18 @@ function initializeEditForm() {
     });
 }
 
-// // 更新ボタンがクリックされた時の処理
-// document.getElementById('update-button').addEventListener('click', function() {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const customerId = urlParams.get('id');
-//     updateCustomer(customerId);
-// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('customer-edit-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // デフォルトのフォーム送信をキャンセル
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const customerId = urlParams.get('id');
+        updateCustomer(customerId);
+    });
+});
 
 // 顧客情報を更新する関数
 function updateCustomer(customerId) {

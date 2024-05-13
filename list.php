@@ -63,8 +63,8 @@
                 <th>メールアドレス</th>
                 <th>電話番号</th>
                 <th>所属会社</th>
-                <th>登録日時</th>
                 <th>更新日時</th>
+                <th>登録日時</th>
                 <th>編集</th>
                 <th>削除</th>
             </tr>
@@ -78,8 +78,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><button class="edit-button" id="edit-button">編集</button></td>
-                <td><button class="delete-button">削除</button></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
