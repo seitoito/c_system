@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('ページが読み込まれました。');
-
     // ここに実行したい処理を記述する
     var requestData = {
         model: "CompanyModel",  
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+// セレクトボックスに会社名を表示
 function updateSelect(data) {
     const companyList = document.getElementById('company-list');
     const selectElement = document.getElementById('company_id');

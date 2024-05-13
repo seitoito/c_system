@@ -81,7 +81,7 @@ class UserModel {
         try {
             // 顧客IDをもとにデータベースから顧客の情報を取得
             $stmt = $this->pdo->prepare("SELECT * FROM users WHERE id = :customerId");//users テーブルから id 列が :customerId にバインドされた値と一致する行を取得
-            $stmt->bindParam(':customerId', $customerId["id"]);//:customerId の値を $customerId["id"] にバインド  値の参照を受け取る？？
+            $stmt->bindParam(':customerId', $customerId["id"]);
             $stmt->execute();//sql文をDBに送信して実行
             $customerData = $stmt->fetch(PDO::FETCH_ASSOC);
             

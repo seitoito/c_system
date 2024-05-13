@@ -3,7 +3,7 @@
 document.getElementById('search-button').addEventListener('click', searchCustomers);
 document.addEventListener('DOMContentLoaded', searchCustomers);
 
-// 一覧表示をする関数
+// 検索
 function searchCustomers() {
     // フォームからの入力値を取得してparamsオブジェクトに格納
     var params = {
@@ -22,10 +22,8 @@ function searchCustomers() {
         method: "search",    // 実行したいメソッド名
         data: params       // 検索データ
     }
-    // console.log(requestData);
 
     
-// const button = document.getElementById('edit-button');
 
 // fetchリクエストを作成してサーバーに送信
 fetch('controller.php', {
@@ -76,6 +74,7 @@ function updateView(data2) {
 }
 
 };
+
 
 //削除の関数
 function deleteCustomer(customerId) {
