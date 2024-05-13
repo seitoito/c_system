@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <h1>顧客登録</h1>
-    <form action="submit.php" method="post">
+    <form method="post" id="customer-form">
         <div class="form-group">
             <label for="customer_name">1. 顧客名</label>
             <input type="text" id="customer_name" name="name" required>
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="email">3. メールアドレス</label>
-            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
         </div>
         <div class="form-group">
             <label for="phone">4. 電話番号</label>
@@ -33,7 +33,7 @@
         <div class="form-group">
         </select>
             <label for="gender">5. 性別</label>
-            <select id="gender" name="gender" required>
+            <select id="gender" name="gender" >
             <option value="1">男性</option>
             <option value="2">女性</option>
             <option value="3">その他</option>
