@@ -16,21 +16,21 @@
     <form method="post" id="customer-edit-form">
         <div class="form-group">
             <label for="customer_name">1. 顧客名</label>
-            <input type="text" id="name" name="name" placeholder="元データを表示" required>
+            <input type="text"maxlength="32" id="name" name="name" placeholder="元データを表示" required>
         </div>
         <div class="form-group">
             <label for="customer_name_kana">2. 顧客名カナ</label>
-            <input type="text" id="name_kana" name="name_kana" pattern="^[ァ-ヶー]+$" placeholder="元データを表示" required>
+            <input type="text" maxlength="32" id="name_kana" name="name_kana" pattern="^[ァ-ヶー]+$" placeholder="元データを表示" required>
         </div>
         <div class="form-group">
             <label for="email">3. メールアドレス</label>
-            <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}$" placeholder="元データを表示">
+            <input type="email" id="email" name="email" maxlength="50" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}$" placeholder="元データを表示">
 
         </div>
 
         <div class="form-group">
             <label for="phone">4. 電話番号</label>
-            <input type="tel" id="phone" pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" name="phone" placeholder="元データを表示">
+            <input type="tel" maxlength="12" id="phone" pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" name="phone" placeholder="元データを表示">
         </div>
 
         <div class="form-group">

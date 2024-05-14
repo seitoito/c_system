@@ -13,22 +13,22 @@
     <form method="post" id="customer-form">
       <div class="form-group">
         <label for="customer_name">1. 顧客名</label>
-        <input type="text" id="customer_name" name="name" required>
+        <input type="text"maxlength="32" id="customer_name" name="name" required>
         <div class="error-message" id="error-name"></div>
       </div>
       <div class="form-group">
         <label for="customer_name_kana">2. 顧客名カナ</label>
-        <input type="text" id="customer_name_kana" name="name_kana" pattern="^[ァ-ヶー]+$" required>
+        <input type="text" id="customer_name_kana" maxlength="32" name="name_kana" pattern="^[ァ-ヶー]+$" required>
         <div class="error-message" id="error-name-kana"></div>
       </div>
       <div class="form-group">
         <label for="email">3. メールアドレス</label>
-        <input type="email" id="email" name="email" >
+        <input type="email"maxlength="50" id="email" name="email" >
         <!-- <div class="error-message" id="error-email"></div> -->
       </div>
       <div class="form-group">
         <label for="phone">4. 電話番号</label>
-        <input type="tel" id="phone" pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" name="phone">
+        <input type="tel" id="phone"maxlength="12" pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" name="phone">
         <div class="error-message" id="error-phone"></div>
       </div>
       <div class="form-group">
