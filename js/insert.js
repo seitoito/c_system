@@ -51,8 +51,8 @@ function validateForm() {
 }
 
 function showError(elementId, message) {
-    var errorElement = document.getElementById(elementId);
-    if (!errorElement) {
+    var errorElement = document.getElementById(elementId);//エラーメッセージ要素を取得
+    if (!errorElement) {//errorElementがnullかundefinedの場合
         errorElement = document.createElement('div');//新しい要素を生成してそこにエラーメッセージが入る
         errorElement.id = elementId;//作成した div 要素に、指定された elementId を設定->特定の入力要素にエラーメッセージが関連付けられる
         var inputElement = document.getElementById(elementId.replace('error-', ''));
