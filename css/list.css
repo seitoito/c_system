@@ -75,7 +75,7 @@ body {
     position: fixed;
     top: 10px;
     right: 50px; /* 右の余白を調整 */
-    padding: 15px 30px; /* パディングを増やしてボタンを大きくする */
+    padding: 15px 80px; /* パディングを増やしてボタンを大きくする */
     font-size: 16px;
     z-index: 1000;
     background-color: #1978d6;
@@ -94,6 +94,7 @@ body {
 .search-button {
     margin-top: 10px; /* セレクトボックスとの間隔を設定 */
     padding: 10px 20px; /* パディングを調整 */
+    margin-left: 50px;
     cursor: pointer;
     background-color:#1978d6;
     color: #ffffff;
@@ -130,5 +131,5 @@ body {
 }
 
 .register-button {
-    position: fixed; top: 10px; right: 10px
+    position: fixed; top: 75px; right: 200px
 }
