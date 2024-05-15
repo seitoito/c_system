@@ -72,15 +72,17 @@ body {
 }
 
 .register-button {
-    position: fixed;
-    top: 10px;
-    right: 50px; /* 右の余白を調整 */
-    padding: 15px 80px; /* パディングを増やしてボタンを大きくする */
+    position: fixed !important;
+    top: 74px ;
+    right: 200px ;
+    padding: 12px 80px;
     font-size: 16px;
     z-index: 1000;
     background-color: #1978d6;
     color: #ffffff;
 }
+
+
 
 /* セレクトと検索ボタンの配置 */
 .company-search-buttons {
@@ -130,6 +132,3 @@ body {
     margin-top: 20px;
 }
 
-.register-button {
-    position: fixed; top: 75px; right: 200px
-}
