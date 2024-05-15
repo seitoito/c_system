@@ -7,7 +7,7 @@ body {
 
 /* TOPボタン */
 .header-button {
-    position: fixed;
+    position: absolute; /* ボタンを絶対位置に配置します */
     top: 10px;
     left: 10px;
     padding: 10px 20px;
@@ -72,15 +72,16 @@ body {
 }
 
 .register-button {
-    position: fixed !important;
-    top: 74px ;
-    right: 200px ;
+    margin-left: 1000px;
+    position: absolute; 
+    top: 78px;
     padding: 12px 80px;
     font-size: 16px;
-    z-index: 1000;
     background-color: #1978d6;
     color: #ffffff;
+    z-index: 1000; /* 他の要素よりも手前に表示されるようにします */
 }
+
 
 
 
